@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"github.com/jfuentesd1801/crud_personas/conexion"
+	"github.com/jfuentesd1801/crud_personas/manejador"
 )
 
 func main() {
@@ -15,5 +16,5 @@ func main() {
 	}
 	defer conexion.ConexionBD.Close()
 
-	log.Println("Conexion exitosa")
+	manejador.Manejador()
 }
