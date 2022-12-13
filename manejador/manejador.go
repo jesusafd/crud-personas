@@ -16,6 +16,7 @@ func Manejador() {
 	ruta.HandleFunc("/persona", middleware.EstadoConexion(rutas.InsertarPersona)).Methods("POST")
 	ruta.HandleFunc("/persona", middleware.EstadoConexion(rutas.VerPersona)).Methods("GET")
 	ruta.HandleFunc("/persona", middleware.EstadoConexion(rutas.ActualizarPersona)).Methods("PUT")
+	ruta.HandleFunc("/persona", middleware.EstadoConexion(rutas.EliminarPerosona)).Methods("DELETE")
 
 	PORT := "8080"
 
