@@ -2,7 +2,7 @@ package modelos
 
 // Persona es la clase modelo para la base de datos
 type Persona struct {
-	ID_persona int
+	ID_persona int    `json:"int"`
 	Nombre     string `json:"nombre"`
 	Apellido   string `json:"apellido"`
 	Edad       int    `json:"edad"`

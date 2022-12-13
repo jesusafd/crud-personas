@@ -14,6 +14,7 @@ func Manejador() {
 	ruta := mux.NewRouter()
 
 	ruta.HandleFunc("/persona", middleware.EstadoConexion(rutas.InsertarPersona)).Methods("POST")
+	ruta.HandleFunc("/persona", middleware.EstadoConexion(rutas.VerPersona)).Methods("GET")
 
 	PORT := "8080"
 
